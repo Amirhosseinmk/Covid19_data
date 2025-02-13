@@ -11,7 +11,7 @@ class doubly_list:
         new_node = Node(data)
         if not self.head:  #here we check whether the list is empty
             self.head = new_node   #by this condition if head was empty means list is empty
-            self.tail = new_node    #so in empty list heat and tail is new node
+            self.tail = new_node    #so in empty list head and tail is new node
         else:
             self.tail.next = new_node
             new_node.prev = self.tail
@@ -47,6 +47,7 @@ class doubly_list:
         
     def display_forward(self):
         forward = self.head
+        print("------- table -------")
         headers = ["State/UTs", "Zone", "Total Cases", "Active", "Discharged", "Deaths",
                "Active Ratio", "Discharge Ratio", "Discharge Avg", "Death Ratio",
                "Death Avg", "Population"]
